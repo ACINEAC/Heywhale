@@ -1,0 +1,7 @@
+#练习
+for i in range(1,10):
+    for j in range(1,10):
+        if j>i:
+            break
+        print('%d*%d=%-d'%(i,j,i*j),end='    ')                                                            #有点点小问题，输出的乘法表没对齐
+    print('')
