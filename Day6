@@ -1,0 +1,41 @@
+#练习1
+def MCD(a,b):
+    '''
+    最大公约数
+    '''
+    if a%b==0:
+        return b
+    else:
+        return MCD(b,a%b)
+def MCM(a,b):
+    '''
+    最小公倍数
+    '''
+    return a*b/MCD(a,b)
+a=int(input('请输入第一个数:'))
+b=int(input('请输入第二个数:'))
+print('{0}与{1}的最大公约数为{2}，最小公倍数为{3}'.format(a,b,MCD(a,b),MCM(a,b)))
+#练习2
+def Check(s):
+    '''
+    回文数判断
+    '''
+    for i in range(int(len(s)/2)):
+        if s[i]!=s[len(s)-i-1]:
+            return False
+    return True
+str=input('请输入字符串:')
+print('该字符串'+('是' if Check(str) else '不是')+'回文串')
+''
+#练习3
+def Check(x):
+    '''
+    判断素数
+    '''
+    for i in range(2,x):
+        if(x%i==0):
+            return False
+    return True
+
+num=int(input('请输入一个自然数:'))
+print('该自然数'+('是' if Check(num) else '不是')+'素数')
