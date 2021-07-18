@@ -1,0 +1,9 @@
+#练习1
+print('hello world !*')
+print('01234')
+#练习3
+print('摄氏温度为',(int(input('请输入华氏温度:'))-32)/1.8)
+#练习3
+from math import pi
+r=int(input('请输入圆的半径:'))
+print('周长为{0},面积为{1}'.format(2*pi*r,pi*r**2))
