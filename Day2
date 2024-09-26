@@ -1,0 +1,32 @@
+#练习1
+while(True):
+    tp=input('请输入数据类型(英寸/厘米):')
+    v=float(input('请输入数值:'))
+    if((tp!='英寸')&(tp!='厘米')):
+        print('非法输入')
+        continue
+    else:
+        print('{0}{1}转化后为{2}{3}'.format(v,tp,v*2.54 if tp=='英寸' else v/2.54,'厘米' if tp=='英寸' else '英寸')) 
+        break
+#练习2
+sc=int(input('请输入成绩:'))
+print('等级为:')
+if sc>=90:
+    print('A')
+elif sc>=80:
+    print('B')
+elif sc>=70:
+    print('C')
+elif sc>=60:
+    print('D')
+else:
+    print('E')
+
+#练习3
+v=int(input('请输入一个整数:'))
+flag=True
+for i in range(2,v):
+    if v%i==0:
+        flag=False
+        break
+print(v,'是素数' if flag else '不是素数')
